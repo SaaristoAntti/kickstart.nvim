@@ -205,15 +205,14 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- Robot files
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = "robot",
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'robot',
   callback = function()
     vim.opt_local.tabstop = 4
     vim.opt_local.shiftwidth = 4
     vim.opt_local.expandtab = true
-  end
+  end,
 })
-
 
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
@@ -637,7 +636,7 @@ require('lazy').setup({
       formatters_by_ft = {
         lua = { 'stylua' },
         -- Conform can also run multiple formatters sequentially
-        python = { "isort", "black" },
+        python = { 'isort', 'black' },
         --
         -- You can use a sub-list to tell conform to run *until* a formatter
         -- is found.
@@ -858,7 +857,7 @@ require('lazy').setup({
   --
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   --    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
-   { import = 'custom.plugins' },
+  { import = 'custom.plugins' },
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
@@ -881,5 +880,11 @@ require('lazy').setup({
   },
 })
 
+-- set jj to ESC
+--vim.api.nvim_set_keymap('i', 'jj', '<Esc>', { noremap = true, silent = true })
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+
+-- show relative numbers-
+vim.opt.relativenumber = true
