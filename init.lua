@@ -891,3 +891,6 @@ require('lazy').setup({
 
 -- show relative numbers-
 vim.opt.relativenumber = true
+
+-- neotree keybinding
+vim.keymap.set('n', '<C-n>', '<Cmd>Neotree toggle<CR>')
