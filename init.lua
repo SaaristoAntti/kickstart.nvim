@@ -897,3 +897,5 @@ vim.opt.relativenumber = true
 
 -- neotree keybinding
 vim.keymap.set('n', '<C-n>', '<Cmd>Neotree toggle<CR>')
+-- on normal mode space + a should input colon(:)
+vim.keymap.set('n', '<Space>a', ':', { noremap = true, silent = true })
