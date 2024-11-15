@@ -908,3 +908,6 @@ vim.opt.relativenumber = true
 vim.keymap.set('n', '<C-n>', '<Cmd>Neotree toggle<CR>')
 -- on normal mode space + a should input colon(:)
 vim.keymap.set('n', '<Space>a', ':', { noremap = true, silent = true })
+
+-- jj to ESC
+vim.api.nvim_set_keymap('i', 'jj', '<Esc>', { noremap = true, silent = true })
