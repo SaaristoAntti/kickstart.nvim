@@ -905,9 +905,19 @@ require('lazy').setup({
 vim.opt.relativenumber = true
 
 -- neotree keybinding
-vim.keymap.set('n', '<C-n>', '<Cmd>Neotree toggle<CR>')
+-- vim.keymap.set('n', '<C-n>', '<Cmd>Neotree toggle<CR>')
+vim.keymap.set('n', '<C-b>', '<Cmd>Neotree toggle<CR>')
+
 -- on normal mode space + a should input colon(:)
 vim.keymap.set('n', '<Space>a', ':', { noremap = true, silent = true })
 
 -- jj to ESC
 vim.api.nvim_set_keymap('i', 'jj', '<Esc>', { noremap = true, silent = true })
+
+-- run playwright tests
+-- run nearest test
+vim.api.nvim_set_keymap('n', '<leader>tn', ":lua require('neotest').run.run()<CR>", { noremap = true, silent = true }) -- Run nearest test
+-- run all tests
+vim.api.nvim_set_keymap('n', '<leader>tf', ":lua require('neotest').run.run(vim.fn.expand('%'))<CR>", { noremap = true, silent = true }) -- Run file
+-- show test summary
+vim.api.nvim_set_keymap('n', '<leader>ts', ":lua require('neotest').summary.toggle()<CR>", { noremap = true, silent = true }) -- Toggle summary
