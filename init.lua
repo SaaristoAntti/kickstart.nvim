@@ -921,3 +921,15 @@ vim.api.nvim_set_keymap('n', '<leader>tn', ":lua require('neotest').run.run()<CR
 vim.api.nvim_set_keymap('n', '<leader>tf', ":lua require('neotest').run.run(vim.fn.expand('%'))<CR>", { noremap = true, silent = true }) -- Run file
 -- show test summary
 vim.api.nvim_set_keymap('n', '<leader>ts', ":lua require('neotest').summary.toggle()<CR>", { noremap = true, silent = true }) -- Toggle summary
+vim.api.nvim_set_keymap('n', '<leader>tl', ":lua require('neotest').output.open({ enter = true })<CR>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>th', ":lua require('neotest').run.run( {args = { '--headed' }})<CR>", { noremap = true, silent = true }) -- Run nearest test
+
+-- vim.api.nvim_set_keymap('n', '<leader>td', ":lua require('neotest').run.run({ args = { '--debug' } })<CR>", { noremap = true, silent = true })
+
+-- Keybinding for running tests with NeotestPlaywrightPreset
+vim.api.nvim_set_keymap(
+  'n',
+  '<leader>tp', -- Shortcut: <leader>pp for "Playwright Preset"
+  ':NeotestPlaywrightPreset<CR>',
+  { noremap = true, silent = true }
+)

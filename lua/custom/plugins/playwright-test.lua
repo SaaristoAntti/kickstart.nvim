@@ -7,6 +7,18 @@ return {
   },
   config = function()
     require('neotest').setup {
+      consumers = {
+        playwright = require('neotest-playwright.consumers').consumers,
+      },
+      icons = {
+        passed = '✔️',
+        failed = '❌',
+        running = '⏳',
+      },
+      output = {
+        enabled = true, -- Enable output for test results
+        open_on_run = 'short', -- Automatically open output on test run
+      },
       adapters = {
         require('neotest-playwright').adapter {
           options = {
