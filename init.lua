@@ -934,11 +934,10 @@ vim.api.nvim_set_keymap(
   { noremap = true, silent = true }
 )
 
-
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = "gitcommit",
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'gitcommit',
   callback = function()
-    vim.cmd([[
+    vim.cmd [[
       syntax match gitDiffHeader /^diff --git .*/
       syntax match gitDiffIndex /^index .*/
       syntax match gitDiffAdded /^+.*$/
@@ -947,7 +946,9 @@ vim.api.nvim_create_autocmd("FileType", {
       highlight gitDiffRemoved guifg=#ff0000 ctermfg=1
       highlight gitDiffHeader guifg=#ffaf00 ctermfg=3
       highlight gitDiffIndex guifg=#af5fff ctermfg=5
-    ]])
+    ]]
   end,
 })
 
+-- yank to clipboard
+vim.opt.clipboard = 'unnamedplus'
