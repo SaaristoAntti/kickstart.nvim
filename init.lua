@@ -952,3 +952,9 @@ vim.api.nvim_create_autocmd('FileType', {
 
 -- yank to clipboard
 vim.opt.clipboard = 'unnamedplus'
+
+-- Remap B to go to the beginning of the current line in Normal mode
+vim.keymap.set('n', 'B', '0', { noremap = true, silent = true, desc = 'Go to beginning of line' })
+
+-- Remap E to go to the end of the current line in Normal mode
+vim.keymap.set('n', 'E', '$', { noremap = true, silent = true, desc = 'Go to end of line' })
