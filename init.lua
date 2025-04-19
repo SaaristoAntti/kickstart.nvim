@@ -971,3 +971,6 @@ vim.keymap.set('n', '<leader>ft', function()
 end, { desc = 'Floating Terminal' })
 
 vim.keymap.set('t', '<C-q>', '<cmd>close<CR>', { noremap = true, silent = true })
+
+-- enter to command mode
+vim.keymap.set('n', '<leader>c', ':', { noremap = true, silent = false, desc = 'Enter command mode (leader)' })
