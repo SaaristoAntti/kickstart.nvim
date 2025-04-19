@@ -958,3 +958,6 @@ vim.keymap.set('n', 'B', '0', { noremap = true, silent = true, desc = 'Go to beg
 
 -- Remap E to go to the end of the current line in Normal mode
 vim.keymap.set('n', 'E', '$', { noremap = true, silent = true, desc = 'Go to end of line' })
+
+-- search virtual environment
+vim.g.python3_host_prog = vim.fn.getcwd() .. "/.venv/bin/python3"
