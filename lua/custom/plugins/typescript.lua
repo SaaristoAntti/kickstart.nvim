@@ -1,5 +1,11 @@
 -- typescrpt lua
 --
+-- return {
+--   require('lspconfig').ts_ls.setup {},
+-- }
+-- TypeScript LSP Configuration
+-- npm install -g typescript-language-server typescript
+
 return {
-  require('lspconfig').ts_ls.setup {},
+  vim.lsp.config('ts_ls', {}),
 }

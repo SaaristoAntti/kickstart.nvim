@@ -2,7 +2,7 @@
 -- npm install -g yaml-language-server
 
 return {
-  require('lspconfig').yamlls.setup {
+  vim.lsp.config('yamlls', {
     settings = {
       yaml = {
         schemas = {
@@ -17,5 +17,5 @@ return {
         },
       },
     },
-  },
+  }),
 }
