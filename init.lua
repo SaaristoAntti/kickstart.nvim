@@ -919,7 +919,7 @@ vim.api.nvim_set_keymap('i', 'jj', '<Esc>', { noremap = true, silent = true })
 
 -- run playwright tests
 -- run nearest test
-vim.api.nvim_set_keymap('n', '<leader>tn', ":lua require('neotest').run.run()<CR>", { noremap = true, silent = true }) -- Run nearest test
+vim.api.nvim_set_keymap('n', '<leader>tr', ":lua require('neotest').run.run()<CR>", { noremap = true, silent = true }) -- Run nearest test
 -- run all tests
 vim.api.nvim_set_keymap('n', '<leader>tf', ":lua require('neotest').run.run(vim.fn.expand('%'))<CR>", { noremap = true, silent = true }) -- Run file
 -- show test summary
