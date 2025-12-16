@@ -937,6 +937,9 @@ vim.api.nvim_set_keymap(
   { noremap = true, silent = true }
 )
 
+-- lazygit
+vim.keymap.set('n', '<leader>gg', ':LazyGit<CR>', { silent = true })
+
 vim.api.nvim_create_autocmd('FileType', {
   pattern = 'gitcommit',
   callback = function()
