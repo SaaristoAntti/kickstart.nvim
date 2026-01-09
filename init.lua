@@ -905,7 +905,7 @@ require('lazy').setup({
 -- vim: ts=2 sts=2 sw=2 et
 
 -- show relative numbers-
-vim.opt.relativenumber = true
+vim.opt.relativenumber = false
 
 -- neotree keybinding
 -- vim.keymap.set('n', '<C-n>', '<Cmd>Neotree toggle<CR>')
