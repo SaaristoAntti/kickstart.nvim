@@ -83,6 +83,9 @@ I hope you enjoy your Neovim journey,
 
 P.S. You can delete this when you're done too. It's your config now! :)
 --]]
+--
+-- luacheck: globals vim
+---@diagnostic disable: undefined-global
 
 -- Set <space> as the leader key
 -- See `:help mapleader`
@@ -977,3 +980,6 @@ vim.keymap.set('t', '<C-q>', '<cmd>close<CR>', { noremap = true, silent = true }
 
 -- enter to command mode
 vim.keymap.set('n', '<leader>c', ':', { noremap = true, silent = false, desc = 'Enter command mode (leader)' })
+
+-- show diagnostics
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
